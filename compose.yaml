@@ -1,0 +1,78 @@
+# 狐岚云本地部署：cp .env.example .env，填写随机AUDIT_KEY和管理员凭据后 docker compose up --build -d。
+services:
+  postgres:
+    image: postgres:18-bookworm
+    environment:
+      POSTGRES_USER: yunzou
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请设置独立数据库密码}
+      POSTGRES_DB: yunzou
+    volumes:
+      - postgres:/var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U yunzou -d yunzou']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  redis:
+    image: redis:7.4-bookworm
+    command: [redis-server, --appendonly, 'yes', --requirepass, '${REDIS_PASSWORD:?请设置独立Redis密码}']
+    volumes:
+      - redis:/data
+    healthcheck:
+      test: [CMD-SHELL, 'REDISCLI_AUTH=$$REDIS_PASSWORD redis-cli ping | grep PONG']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    restart: unless-stopped
+  migrate:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://yunzou:${POSTGRES_PASSWORD}@postgres:5432/yunzou
+    command: [node, scripts/database.ts]
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    build: .
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3301
+      TRUST_PROXY_CIDRS: loopback,uniquelocal
+      DATABASE_URL: postgresql://yunzou:${POSTGRES_PASSWORD}@postgres:5432/yunzou
+      REDIS_URL: redis://:${REDIS_PASSWORD}@redis:6379
+      FILE_STORAGE_DIR: /var/lib/yunzou/files
+      CERTIFICATION_STORAGE_DIR: /var/lib/yunzou/certifications
+    volumes:
+      - api-files:/var/lib/yunzou
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+  web:
+    build: .
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3300
+      NUXT_API_ORIGIN: http://api:3301
+      NUXT_TRUST_PROXY_CIDRS: ${NUXT_TRUST_PROXY_CIDRS:-}
+      NUXT_PUBLIC_SITE_URL: ${PUBLIC_ORIGIN}
+    command: [node, apps/web/.output/server/index.mjs]
+    ports: ['127.0.0.1:3300:3300']
+    depends_on: [api]
+    restart: unless-stopped
+  agent:
+    build: ./agent
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://yunzou:${POSTGRES_PASSWORD}@postgres:5432/yunzou
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+volumes:
+  postgres:
+  redis:
+  api-files:

@@ -1,0 +1,12 @@
+node_modules
+**/node_modules
+**/.nuxt
+**/.output
+**/dist
+.git
+.env
+.runtime
+reference/*
+!reference/inventory.json
+artifacts
+agent

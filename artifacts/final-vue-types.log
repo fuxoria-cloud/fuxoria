@@ -1,0 +1,2 @@
+npm notice run yunzou@0.1.0 npx
+npm notice run 'vue-tsc' --noEmit -p apps/web/.nuxt/tsconfig.json

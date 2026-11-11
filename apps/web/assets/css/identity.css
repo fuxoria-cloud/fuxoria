@@ -1,0 +1,133 @@
+/* 联系人、开发者、客户和角色管理的表单布局；颜色与控件仍使用KIMA。调用：各身份页面导入。 */
+.identity-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--kima-space-6);
+  align-items: start;
+}
+.identity-grid > * {
+  min-width: 0;
+}
+.identity-stack {
+  display: grid;
+  gap: var(--kima-space-5);
+}
+.identity-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--kima-space-5);
+}
+.identity-fields > label:not(.identity-check),
+.identity-stack > label:not(.identity-check) {
+  display: grid;
+  gap: var(--kima-space-2);
+  min-width: 0;
+}
+.identity-wide {
+  grid-column: 1/-1;
+}
+.identity-check {
+  display: flex;
+  align-items: center;
+  gap: var(--kima-space-3);
+  min-height: 44px;
+  cursor: pointer;
+}
+.identity-check input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--kima-color-primary);
+}
+.identity-check:has(input:focus-visible) {
+  outline: 2px solid var(--kima-color-primary);
+  outline-offset: 2px;
+  border-radius: var(--kima-radius-s);
+}
+.identity-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kima-space-3);
+  align-items: center;
+}
+.identity-record {
+  padding: var(--kima-space-5) 0;
+  border-bottom: 1px solid var(--kima-color-outline-variant);
+}
+.identity-record:first-child {
+  padding-top: 0;
+}
+.identity-record:last-child {
+  border-bottom: 0;
+}
+.identity-record h3 {
+  margin: 0 0 var(--kima-space-2);
+}
+.identity-record p {
+  margin: var(--kima-space-2) 0;
+  overflow-wrap: anywhere;
+}
+.identity-record .identity-actions {
+  margin-top: var(--kima-space-4);
+}
+.identity-proof {
+  padding: var(--kima-space-5);
+  background: var(--kima-color-layer-1);
+  border-radius: var(--kima-radius-m);
+}
+.identity-proof h3 {
+  margin-top: 0;
+}
+.identity-secret {
+  display: block;
+  padding: var(--kima-space-4);
+  border-radius: var(--kima-radius-s);
+  background: var(--kima-color-layer-2);
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+.scope-list details {
+  border-bottom: 1px solid var(--kima-color-outline-variant);
+}
+.scope-list summary {
+  padding: var(--kima-space-3) 0;
+  min-height: 44px;
+  cursor: pointer;
+}
+.scope-list summary span {
+  margin-left: var(--kima-space-3);
+}
+.scope-option {
+  padding: var(--kima-space-2) 0;
+}
+.scope-option code {
+  font-size: var(--kima-font-size-body-small);
+  overflow-wrap: anywhere;
+}
+.identity-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--kima-space-3);
+  margin-bottom: var(--kima-space-6);
+}
+.identity-toolbar > label {
+  flex: 1;
+  min-width: 160px;
+}
+@media (max-width: 1050px) {
+  .identity-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .identity-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .identity-actions > .kima-button {
+    flex: 1;
+  }
+  .identity-toolbar > label {
+    flex-basis: 100%;
+  }
+}

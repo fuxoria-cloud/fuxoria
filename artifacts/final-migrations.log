@@ -1,0 +1,10 @@
+npm notice run yunzou@0.1.0 db:migrate
+npm notice run tsx scripts/database.ts
+已应用 030_v376_account_recovery.sql
+已应用 031_v376_custom_fields.sql
+已应用 032_v376_catalogue_rules.sql
+已应用 033_v376_currencies.sql
+已应用 034_v376_sales.sql
+已应用 035_v376_messaging.sql
+已应用 036_v376_batches.sql
+已应用 037_v376_tax_corrections.sql

@@ -1,0 +1,12 @@
+npm notice run yunzou@0.1.0 test:review
+npm notice run node --import tsx apps/api/tests/finance-review.integration.ts
+{"pass":"015孤立钱包来源无法提交"}
+{"pass":"钱包并发与重试仅扣两笔","balanceCents":"800"}
+{"pass":"钱包持锁期间并发续费用户外键不再死锁"}
+{"pass":"MFA证明与交付审计不再死锁，同键并发返回同一资源任务"}
+{"pass":"终止意图阻断新续费与钱包扣款，十次晚到通知只入一笔现金和一条核对"}
+{"pass":"退款pending及部分成功不结案，合计100分确认后resolved且并发不重复记账"}
+{"pass":"人工确认旧欠费暂停保留事实并仅补一条恢复任务"}
+{"pass":"有既有资源时拒绝更换供应商"}
+{"pass":"账单明细与后台核对SQL实际可用且边界页长有效"}
+{"pass":"实际源码API运行：核对接口401/403/200、账单跨户404、私有缓存no-store"}

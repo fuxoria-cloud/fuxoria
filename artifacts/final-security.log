@@ -1,0 +1,19 @@
+npm notice run yunzou@0.1.0 test:security
+npm notice run node --env-file=.env --import tsx --test apps/api/tests/security.integration.test.ts
+✔ 资料保存兼容仅姓名旧请求，拒绝角色与邮箱改写 (2861.778827ms)
+✔ TOTP密钥只以绑定账号的密文保存，开启后旧会话立即失效 (572.205702ms)
+✔ 待确认密钥只返回一次，过期设置不能确认，缺TOTP_KEY明确拒绝 (946.533288ms)
+✔ 密码正确仍需第二因素，同一TOTP的并发登录只有一次成功 (1408.842217ms)
+✔ 恢复码并发只消费一次，关闭MFA必须当前密码和第二因素 (1656.441632ms)
+✔ 恢复码重置撤销旧码，密码变更撤销旧会话且旧口令不能继续登录 (1859.462088ms)
+✔ 旧###摘要仅在授权码正确时登录并升级，短旧口令不会喂入Argon2 (704.525047ms)
+✔ 复制TOTP密文到另一账号无法通过认证，事务回滚不消费恢复码 (329.215525ms)
+✔ 会话撤销及签发固定版本，不能用旧认证结果获得并发改密后的版本 (121.195322ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15210.204193

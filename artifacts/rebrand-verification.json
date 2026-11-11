@@ -1,0 +1,304 @@
+{
+  "project": "狐岚云 · Fuxoria Cloud",
+  "repository": "https://github.com/fuxoria-cloud/fuxoria",
+  "checkedAt": "2026-11-11T14:28:50.306978+00:00",
+  "sourceSha256": "25ed559d3e22a65153908db7d647e2a941d00ae56d4937016a855e5bd0489cd2",
+  "sourceFiles": 308,
+  "checks": [
+    {
+      "name": "unit",
+      "status": "passed",
+      "testsIncludingParentTests": 23,
+      "log": "artifacts/final-rebrand-unit.log",
+      "sha256": "d27ab973787f6b1ded21d2ccd7a592b19dff0bbb103ebaebb6495630556527bb"
+    },
+    {
+      "name": "integration",
+      "status": "passed",
+      "testsIncludingParentTests": 13,
+      "log": "artifacts/final-rebrand-integration.log",
+      "sha256": "b294638d0ecb026172fa36b8ad571b91be72ac805a98951cb2100d40043cdb3d"
+    },
+    {
+      "name": "security",
+      "status": "passed",
+      "testsIncludingParentTests": 9,
+      "log": "artifacts/final-rebrand-security.log",
+      "sha256": "429cb26dc3cf5ccd3fc23838f95a1f063451e95d5f251aae1fc0eb252d0b9305"
+    },
+    {
+      "name": "proxy",
+      "status": "passed",
+      "testsIncludingParentTests": 8,
+      "log": "artifacts/final-rebrand-proxy.log",
+      "sha256": "8e0a826f8f95367f4697caa8942403f39fb1bfdc1b9b52bdab49fff5432e6de9"
+    },
+    {
+      "name": "browser-support",
+      "status": "passed",
+      "testsIncludingParentTests": 13,
+      "log": "artifacts/final-rebrand-browser-support.log",
+      "sha256": "3a6e42c75cef15e304f46b60750b29b315c5e84954b560d4ece908968613c29c"
+    },
+    {
+      "name": "browser-catalogue",
+      "status": "passed",
+      "testsIncludingParentTests": 7,
+      "log": "artifacts/final-rebrand-browser-catalogue.log",
+      "sha256": "bcd819620c5d533f5f55191c7e4ed85778058e46ba22a70a7d25efc005a6b0b7"
+    },
+    {
+      "name": "browser-accounts",
+      "status": "passed",
+      "testsIncludingParentTests": 10,
+      "log": "artifacts/final-rebrand-browser-accounts.log",
+      "sha256": "deb8fda88d315c241b4fe1369338a1e8952ab1eda694655434edceb1387acb87"
+    },
+    {
+      "name": "browser-navigation",
+      "status": "passed",
+      "testsIncludingParentTests": 16,
+      "log": "artifacts/final-rebrand-browser-navigation.log",
+      "sha256": "36076d0810b38b0141fa74ad7ae3e8e3d8578fee8f298a06791b11fcb6b940c5"
+    }
+  ],
+  "goRaceAndVet": "artifacts/final-rebrand-go.log",
+  "build": "artifacts/final-rebrand-build.log",
+  "finalWebBuild": "artifacts/final-rebrand-web-build.log",
+  "vueTypes": "artifacts/final-rebrand-vue-types.log",
+  "realLocalCommerce": {
+    "productCreatedAtZeroYuan": true,
+    "realCartItems": 2,
+    "invoiceItemCount": 3,
+    "invoiceAmountMatchesServer": true,
+    "freeServices": 2,
+    "lifecycle": [
+      "active",
+      "suspended",
+      "active",
+      "cancelled"
+    ],
+    "terminationPreventsRenewal": true,
+    "screenshotCount": 11,
+    "pageErrors": []
+  },
+  "readonlyNavigation": {
+    "checkedAt": "2026-11-11T14:28:09.194Z",
+    "routes": [
+      "/",
+      "/products",
+      "history.back → /"
+    ],
+    "documents": 1,
+    "windowPreserved": true,
+    "api": [
+      {
+        "method": "GET",
+        "path": "/api/v1/currencies"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/products"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/products"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/catalogue"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/products"
+      }
+    ],
+    "pageErrors": [],
+    "mobileHeader": {
+      "text": "FUXORIA CLOUD",
+      "brandRight": 146,
+      "wordRight": 146,
+      "actionsRight": 370.015625,
+      "headerRight": 370,
+      "viewport": 390,
+      "scroll": 390,
+      "controls": [
+        {
+          "width": 48,
+          "height": 48
+        },
+        {
+          "width": 108.015625,
+          "height": 48
+        },
+        {
+          "width": 48,
+          "height": 48
+        }
+      ]
+    },
+    "mutations": 0
+  },
+  "migrations": [
+    {
+      "file": "database/migrations/001_business.sql",
+      "sha256": "8d89bc5fdc23b4f6d67e568fd7a0b242c01df1f5ec740f40b7649dfcb954eecc"
+    },
+    {
+      "file": "database/migrations/002_service_queue.sql",
+      "sha256": "e773d2626e3a0f02883295d05a82d65779734938804b70c37fd865cc74eb7e24"
+    },
+    {
+      "file": "database/migrations/003_audit_payload.sql",
+      "sha256": "1da7e96d4fae9739387052e1f5e3c8d99907e6f477c9592f18e2cf1232c0168d"
+    },
+    {
+      "file": "database/migrations/004_refunds.sql",
+      "sha256": "d0cd468fd06566da8774d35176202484649ca5487fafd2c61a36247da31bc302"
+    },
+    {
+      "file": "database/migrations/005_publications.sql",
+      "sha256": "a2cf545aa8eea8c1956a74cdbd7cc886a1819f16b27e344214cf625014ffda95"
+    },
+    {
+      "file": "database/migrations/006_extensions.sql",
+      "sha256": "678d4dfa87d00f2113caa65a755d8d96fe8bb2842abdb45d7b4de206e3b859a3"
+    },
+    {
+      "file": "database/migrations/007_imports.sql",
+      "sha256": "7c4d101fffa996b24fba7651867d32e748aacb7ea1b2dc3c39429974f160460d"
+    },
+    {
+      "file": "database/migrations/008_account_security.sql",
+      "sha256": "ff37de394b73fb4ed5d9b84d50d5db2221e72012970f1eddd389ce0012a9a70a"
+    },
+    {
+      "file": "database/migrations/009_import_guards.sql",
+      "sha256": "062cbefd9c7da42d2ec2773331333ed120cff9b6c329b155e9df3ef778e46d1c"
+    },
+    {
+      "file": "database/migrations/010_wallet.sql",
+      "sha256": "cd797b82e7e115749c37b1df501376ad3e1377664f0e3a5ae25641273c010586"
+    },
+    {
+      "file": "database/migrations/011_finance_invariants.sql",
+      "sha256": "8f2054a9b552c88c1c651b12a87a4801a405d69633d0145e1a4bd8973df9418f"
+    },
+    {
+      "file": "database/migrations/012_callbacks.sql",
+      "sha256": "506fe776a4573ef4b42ea710ae6ef037cb70e58da7a6fc00dee264bf655993fd"
+    },
+    {
+      "file": "database/migrations/013_cart.sql",
+      "sha256": "c24501cc153de4d989d0d2d35de644aefe7eedb910f82af620241a9f322bd129"
+    },
+    {
+      "file": "database/migrations/014_schedule_index.sql",
+      "sha256": "33800f4ef59f0125048af60cf4d7fe08999ecfbe3691491667deeb023c509acd"
+    },
+    {
+      "file": "database/migrations/015_wallet_source_guard.sql",
+      "sha256": "98ce9169f0a73f5d904ca2915f62e055c7f959601a0cfe0792289b39d9eb151c"
+    },
+    {
+      "file": "database/migrations/016_billing_reviews.sql",
+      "sha256": "3c5e70a1d335f05e1bb1ad343ed7eb5a9f3a0343e1a20b3102501b9f04910aae"
+    },
+    {
+      "file": "database/migrations/017_v376_catalogue.sql",
+      "sha256": "5d7acb83cbfb4fe3f57ac2e5629668a84c37489eb553de31a4c433b53339500f"
+    },
+    {
+      "file": "database/migrations/018_v376_identity.sql",
+      "sha256": "d3e3df8bb807b460ca94b1c67c6f03d6f90c83936785f0a5711ec30a9dcffd81"
+    },
+    {
+      "file": "database/migrations/019_v376_support.sql",
+      "sha256": "2174a2d955cf5cda49296a7099236cacc7710404fd53368a755832d6cd6d1cb3"
+    },
+    {
+      "file": "database/migrations/020_v376_documents.sql",
+      "sha256": "960a029119d46eedbdf5fee1251c5b4de4cbf9f7be32fb84b654f644ea5af184"
+    },
+    {
+      "file": "database/migrations/021_v376_service_lifecycle.sql",
+      "sha256": "c253cf0e1c68a1da30ee6c7684297e176c68d971b8870dde90fec29078fe79e1"
+    },
+    {
+      "file": "database/migrations/022_v376_affiliates.sql",
+      "sha256": "a474c7089b5e08c50ad728879da3c383b6ea19b60afe3c832f05276ff105dab5"
+    },
+    {
+      "file": "database/migrations/023_v376_recharge.sql",
+      "sha256": "b5c5ba7070784560ff09fb7b3ba2bd616ce2857b0ec2441c59a9e6f1ffd0db75"
+    },
+    {
+      "file": "database/migrations/024_v376_upgrades.sql",
+      "sha256": "4a5c2094271f58c13a647aff0ed0f205aabc827758ff8c4431be94376d22e851"
+    },
+    {
+      "file": "database/migrations/025_v376_credit.sql",
+      "sha256": "08b9291141649250c817c9e7e54b465989d4cbc2a9b9f6e13227d37e063c2514"
+    },
+    {
+      "file": "database/migrations/026_v376_verification.sql",
+      "sha256": "6ea2d9affe9d12c2ddf057e1c7a5872578b2263b8b707626337f00db65ea4376"
+    },
+    {
+      "file": "database/migrations/027_v376_affiliate_credit.sql",
+      "sha256": "a72435eb998ab1758b75ab92472a7787406008359b5b589064536267ea95ee87"
+    },
+    {
+      "file": "database/migrations/028_v376_account_verification.sql",
+      "sha256": "65efb07e283dd1c44baa7846c20ded93a6252fabd5b48bdeef5cda9565d4523b"
+    },
+    {
+      "file": "database/migrations/029_v376_combined.sql",
+      "sha256": "c08c27aa6260541b6480c6d1b55fdb1d23789dd120b1a48949db23c0022d5ded"
+    },
+    {
+      "file": "database/migrations/030_v376_account_recovery.sql",
+      "sha256": "add7a454c9825a9fe2245924e66b7bd05fc6c7c0239310fad8c197b8e746b3ed"
+    },
+    {
+      "file": "database/migrations/031_v376_custom_fields.sql",
+      "sha256": "95390a8239c412354b592c433ebc92a89c1a764f0f83ad8747c246ee8347d92b"
+    },
+    {
+      "file": "database/migrations/032_v376_catalogue_rules.sql",
+      "sha256": "fb64433f666ddb0a3fbc0af156f46ec38dc53fbf01516815a25d4e626f8e6757"
+    },
+    {
+      "file": "database/migrations/033_v376_currencies.sql",
+      "sha256": "028d13e5961511c911a5aff5dbde48d40dc6c3d2ff1db39cc39a8b078143862e"
+    },
+    {
+      "file": "database/migrations/034_v376_sales.sql",
+      "sha256": "ecf3b5cc4f2e4c36d113c579223542156d74747c9447bc2585c6cbcb60430a41"
+    },
+    {
+      "file": "database/migrations/035_v376_messaging.sql",
+      "sha256": "e64495f02ea9e462d40e39529e7db77cd5b0f28c0ca1e262aa2def21078f2540"
+    },
+    {
+      "file": "database/migrations/036_v376_batches.sql",
+      "sha256": "e627dd4160a2ecf5ddf2e199c80fe7f663b27c9270104d630b059669e888eab4"
+    },
+    {
+      "file": "database/migrations/037_v376_tax_corrections.sql",
+      "sha256": "ccf2098c41266114fb8793263f62123e6b63a2d81eab3d84d8651902dc8a2770"
+    },
+    {
+      "file": "database/migrations/038_v376_resource_modules.sql",
+      "sha256": "053dc433ce9e304fa36ee85cf03d4bef43f3cadc1904ff49d6b94816797c8e34"
+    }
+  ],
+  "migrationDatabaseCheck": "artifacts/final-rebrand-migration-check.log",
+  "secretCheck": {
+    "stagedFiles": 474,
+    "commonCredentialPatternsFound": 0,
+    "localSecretValueMatches": 0
+  },
+  "brandingConfirmation": "名称由项目所有者确认没有冲突，本记录不作为官方商标注册结论。",
+  "compatibility": "原Cookie、密文用途、验证码前缀、用户数据目录与历史迁移保持兼容。"
+}

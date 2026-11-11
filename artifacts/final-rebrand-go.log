@@ -1,0 +1,7 @@
+go test -race -count=1 ./...
+?   	github.com/fuxoria-cloud/fuxoria/agent	[no test files]
+ok  	github.com/fuxoria-cloud/fuxoria/agent/features	15.955s
+ok  	github.com/fuxoria-cloud/fuxoria/agent/utils	1.006s
+检查通过
+go vet ./...
+检查通过

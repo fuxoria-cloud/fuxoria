@@ -1,0 +1,4 @@
+{
+  "mode": "manual",
+  "actions": ["provision", "suspend", "resume", "terminate", "renew", "upgrade"]
+}

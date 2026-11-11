@@ -1,0 +1,3 @@
+npm notice run yunzou@0.1.0 keys:ensure
+npm notice run node scripts/keys.ts
+独立密钥已齐全。

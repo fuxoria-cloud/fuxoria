@@ -1,0 +1,379 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@nuxt/nitro-server": {
+      "name": "@nuxt/nitro-server",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1242827,
+          "name": "@nuxt/nitro-server",
+          "dependency": "@nuxt/nitro-server",
+          "title": "Nuxt: Server-side route rules (`redirect`, `headers`, `proxy`, `ssr`) are skipped for case-variant paths when routing is case-insensitive",
+          "url": "https://github.com/advisories/GHSA-vjh5-4x84-xrqp",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-178",
+            "CWE-863"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=3.20.0 <4.0.0"
+        },
+        "nitropack",
+        "nuxt"
+      ],
+      "effects": [
+        "nuxt"
+      ],
+      "range": ">=3.20.0",
+      "nodes": [
+        "node_modules/@nuxt/nitro-server"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "@nuxt/vite-builder": {
+      "name": "@nuxt/vite-builder",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1244029,
+          "name": "@nuxt/vite-builder",
+          "dependency": "@nuxt/vite-builder",
+          "title": "Nuxt dev server exposes private runtime config through the Nitro dev bundle",
+          "url": "https://github.com/advisories/GHSA-648h-gw55-m2g7",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200",
+            "CWE-538",
+            "CWE-552"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=3.0.0 <4.6.3"
+        },
+        "nuxt"
+      ],
+      "effects": [
+        "nuxt"
+      ],
+      "range": "3.0.0 - 4.6.2",
+      "nodes": [
+        "node_modules/@nuxt/vite-builder"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "@rollup/plugin-node-resolve": {
+      "name": "@rollup/plugin-node-resolve",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "deepmerge"
+      ],
+      "effects": [
+        "nitropack"
+      ],
+      "range": ">=8.0.0",
+      "nodes": [
+        "node_modules/@rollup/plugin-node-resolve"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "@vercel/nft": {
+      "name": "@vercel/nft",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "glob"
+      ],
+      "effects": [
+        "nitropack"
+      ],
+      "range": ">=0.29.2",
+      "nodes": [
+        "node_modules/@vercel/nft"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "archiver": {
+      "name": "archiver",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "readdir-glob"
+      ],
+      "effects": [
+        "nitropack"
+      ],
+      "range": ">=8.0.0",
+      "nodes": [
+        "node_modules/archiver"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "deepmerge": {
+      "name": "deepmerge",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1243505,
+          "name": "deepmerge",
+          "dependency": "deepmerge",
+          "title": "deepmerge mergeObject() allows prototype poisoning of returned objects",
+          "url": "https://github.com/advisories/GHSA-gcqx-w48m-w2h4",
+          "severity": "low",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": ">=4.2.0 <=4.3.1"
+        }
+      ],
+      "effects": [
+        "@rollup/plugin-node-resolve"
+      ],
+      "range": ">=4.2.0",
+      "nodes": [
+        "node_modules/deepmerge"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "glob": {
+      "name": "glob",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1244013,
+          "name": "glob",
+          "dependency": "glob",
+          "title": "Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal",
+          "url": "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=9.0.0 <=14.0.1"
+        },
+        "minimatch"
+      ],
+      "effects": [
+        "@vercel/nft"
+      ],
+      "range": "9.0.0 - 14.0.1",
+      "nodes": [
+        "node_modules/glob"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "minimatch": {
+      "name": "minimatch",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1244623,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch has potential denial of service via globparts amplification",
+          "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-405"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=7.0.0 <11.0.1"
+        }
+      ],
+      "effects": [
+        "glob",
+        "readdir-glob"
+      ],
+      "range": "7.0.0 - 11.0.0",
+      "nodes": [
+        "node_modules/minimatch"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "nitropack": {
+      "name": "nitropack",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@rollup/plugin-node-resolve",
+        "@vercel/nft",
+        "archiver"
+      ],
+      "effects": [
+        "@nuxt/nitro-server"
+      ],
+      "range": ">=0.1.0",
+      "nodes": [
+        "node_modules/nitropack"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "nuxt": {
+      "name": "nuxt",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "@nuxt/nitro-server",
+        "@nuxt/vite-builder",
+        {
+          "source": 1242829,
+          "name": "nuxt",
+          "dependency": "nuxt",
+          "title": "Nuxt: Server-side route rules (`redirect`, `headers`, `proxy`, `ssr`) are skipped for case-variant paths when routing is case-insensitive",
+          "url": "https://github.com/advisories/GHSA-vjh5-4x84-xrqp",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-178",
+            "CWE-863"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=3.0.0 <4.0.0"
+        },
+        {
+          "source": 1242831,
+          "name": "nuxt",
+          "dependency": "nuxt",
+          "title": "Nuxt server islands render `useHeadSafe` input without sanitisation",
+          "url": "https://github.com/advisories/GHSA-xfq5-w38q-pc2x",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 5.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": ">=3.13.0 <4.6.2"
+        },
+        {
+          "source": 1242832,
+          "name": "nuxt",
+          "dependency": "nuxt",
+          "title": "Nuxt: Incomplete fix for GHSA-934w-87qh-qr26: a `javascript:` URL prefixed with an ASCII control character executes from `<NuxtLink>` when `pages` is disabled",
+          "url": "https://github.com/advisories/GHSA-jjm6-p2m9-9w4x",
+          "severity": "low",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<4.6.0"
+        }
+      ],
+      "effects": [
+        "@nuxt/nitro-server",
+        "@nuxt/vite-builder"
+      ],
+      "range": "<=4.6.2",
+      "nodes": [
+        "node_modules/nuxt"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    },
+    "readdir-glob": {
+      "name": "readdir-glob",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "minimatch"
+      ],
+      "effects": [
+        "archiver"
+      ],
+      "range": "2.0.0 - 3.0.0",
+      "nodes": [
+        "node_modules/readdir-glob"
+      ],
+      "fixAvailable": {
+        "name": "nuxt",
+        "version": "4.6.4",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 2,
+      "moderate": 9,
+      "high": 0,
+      "critical": 0,
+      "total": 11
+    },
+    "dependencies": {
+      "prod": 782,
+      "dev": 140,
+      "optional": 137,
+      "peer": 30,
+      "peerOptional": 0,
+      "total": 1062
+    }
+  }
+}

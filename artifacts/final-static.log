@@ -1,0 +1,12 @@
+npm notice run yunzou@0.1.0 test:static
+npm notice run node --env-file=.env --import tsx --test scripts/static.test.ts
+✔ 静态分发失败后重放上传与删除意图，损坏同尺寸文件也能修复 (634.22098ms)
+✔ 文章换目标重建、同尺寸损坏修复及清单失败后仍重放更新撤回路径 (2028.383484ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2794.552472

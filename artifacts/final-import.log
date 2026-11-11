@@ -1,0 +1,19 @@
+npm notice run yunzou@0.1.0 test:import
+npm notice run node --env-file=.env --import tsx --test apps/api/tests/import.test.ts
+▶ 原系统迁移：完整性、严格预检、只写空库与会计对账
+  ✔ 导出只读SQL、金额文本、0600和完整快照校验 (3.734118ms)
+  ✔ 确定性ID、原状态、合同价和期初负债都有明确来源 (0.598409ms)
+  ✔ 未知状态、周期、金额、关系和非空未映射表都阻断 (2.962362ms)
+  ✔ CLI默认dryrun不连接IMPORT_DATABASE_URL，apply缺断言不写入 (181.380807ms)
+  ✔ 完整迁移的精确默认配置可保留，修改设置或币种仍拒绝导入 (29.92163ms)
+  ✔ 晚期外键错误全部回滚，空库之外拒绝再导入 (148.654731ms)
+  ✔ 真实原流水、期初余额、作者和legacy凭据完整落库且不触发开通 (36.039886ms)
+✔ 原系统迁移：完整性、严格预检、只写空库与会计对账 (932.070458ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1087.181828

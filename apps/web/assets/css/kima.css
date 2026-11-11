@@ -1,0 +1,22 @@
+/* KIMA样式只有一个PostCSS入口，共享token在本次依赖树中合并去重。 */
+@import "@kernel4632/kima/styles/button.css";
+@import "@kernel4632/kima/styles/icon-button.css";
+@import "@kernel4632/kima/styles/link.css";
+@import "@kernel4632/kima/styles/card.css";
+@import "@kernel4632/kima/styles/text-field.css";
+@import "@kernel4632/kima/styles/textarea.css";
+@import "@kernel4632/kima/styles/select.css";
+@import "@kernel4632/kima/styles/table.css";
+@import "@kernel4632/kima/styles/radio-group.css";
+@import "@kernel4632/kima/styles/drawer.css";
+@import "@kernel4632/kima/styles/chip.css";
+@import "@kernel4632/kima/styles/alert.css";
+@import "@kernel4632/kima/styles/empty-state.css";
+@import "@kernel4632/kima/styles/skeleton.css";
+@import "@kernel4632/kima/styles/qr-code.css";
+@import "@kernel4632/kima/styles/collapsible.css";
+@import "@kernel4632/kima/styles/checkbox.css";
+@import "@kernel4632/kima/styles/number-field.css";
+@import "@kernel4632/kima/styles/file-upload.css";
+@import "@kernel4632/kima/styles/alert-dialog.css";
+@import "@fontsource/maple-mono/latin-600.css";

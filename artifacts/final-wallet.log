@@ -1,0 +1,18 @@
+npm notice run yunzou@0.1.0 test:wallet
+npm notice run node --env-file=.env --import tsx --test apps/api/tests/wallet.integration.test.ts
+▶ 钱包并发与账本在独立数据库内保持一致
+  ✔ 同一账号同时付两张账单不会透支 (41.811309ms)
+  ✔ 十次重复扣款只保留一次支付和一次开通 (47.004625ms)
+  ✔ 不能用别人的账单探测或扣款 (2.76407ms)
+  ✔ 钱包明细可追到原账单与期初来源 (2.010125ms)
+  ✔ 数据库拒绝没有分录的孤立钱包支付标记 (13.591199ms)
+  ✔ 旧孤立记录不能让重试接口误报付款成功 (22.537619ms)
+✔ 钱包并发与账本在独立数据库内保持一致 (1728.175437ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1881.361668

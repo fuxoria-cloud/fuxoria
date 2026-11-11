@@ -1,0 +1,52 @@
+{
+  "name": "fuxoria",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.ts",
+    "dev": "npm run dev --workspace=@fuxoria/web",
+    "dev:api": "npm run dev --workspace=@fuxoria/api",
+    "build": "npm run build --workspace=@fuxoria/payments && npm run build --workspace=@fuxoria/api && npm run build --workspace=@fuxoria/web",
+    "test": "npm run test --workspace=@fuxoria/api && npm run test --workspace=@fuxoria/payments",
+    "db:migrate": "tsx scripts/database.ts",
+    "bootstrap": "tsx scripts/bootstrap.ts",
+    "test:integration": "tsx --test apps/api/tests/integration.test.ts",
+    "test:finance": "node --env-file=.env --import tsx --test apps/api/tests/refund.integration.test.ts",
+    "test:wallet": "node --env-file=.env --import tsx --test apps/api/tests/wallet.integration.test.ts",
+    "test:security": "node --env-file=.env --import tsx --test apps/api/tests/security.integration.test.ts",
+    "test:cart": "node --env-file=.env --import tsx --test apps/api/tests/cart.integration.test.ts",
+    "test:import": "node --env-file=.env --import tsx --test apps/api/tests/import.test.ts",
+    "test:review": "node --import tsx apps/api/tests/finance-review.integration.ts",
+    "test:lifecycle": "node --env-file=.env --import tsx --test apps/api/tests/lifecycle.integration.test.ts",
+    "test:ajax": "node --test apps/web/tests/ajax.browser.mjs",
+    "test:ajax-live": "node apps/web/tests/navigation.live.mjs",
+    "test:static": "node --env-file=.env --import tsx --test scripts/static.test.ts",
+    "publish:content": "tsx scripts/publish.ts",
+    "publish:static": "tsx scripts/static.ts",
+    "audit:verify": "tsx scripts/verify-audit.ts",
+    "keys:ensure": "node scripts/keys.ts",
+    "test:catalogue": "node --env-file=.env --import tsx --test apps/api/tests/catalogue.integration.test.ts",
+    "test:identity": "node --env-file=.env --import tsx --test apps/api/tests/identity.integration.test.ts",
+    "test:support": "node --env-file=.env --import tsx --test apps/api/tests/support.integration.test.ts",
+    "test:documents": "node --env-file=.env --import tsx --test apps/api/tests/documents.integration.test.ts",
+    "test:credit": "node --env-file=.env --import tsx --test apps/api/tests/credit.integration.test.ts",
+    "test:affiliate": "node --env-file=.env --import tsx --test apps/api/tests/affiliate.integration.test.ts",
+    "test:upgrade": "node --env-file=.env --import tsx --test apps/api/tests/upgrade.integration.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "@playwright/test": "^1.61.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

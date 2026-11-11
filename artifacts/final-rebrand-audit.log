@@ -1,0 +1,3 @@
+npm notice run fuxoria@0.1.0 audit:verify
+npm notice run tsx scripts/verify-audit.ts
+{"status":"verified","count":138,"historicalCount":18,"lastId":"138","lastHash":"f3ff2c3a07fee903cb2cd506f54adb0cafd5ad2f4b28072a65b5436ff1c8c136"}

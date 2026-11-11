@@ -1,0 +1,3 @@
+npm notice run yunzou@0.1.0 test:ajax-live
+npm notice run node apps/web/tests/navigation.live.mjs
+{"checkedAt":"2026-11-11T04:32:24.297Z","routes":["/","/products","history.back → /"],"documents":1,"windowPreserved":true,"api":[{"method":"GET","path":"/api/v1/currencies"},{"method":"GET","path":"/api/v1/products"},{"method":"GET","path":"/api/v1/products"},{"method":"GET","path":"/api/v1/catalogue"}],"pageErrors":[],"mutations":0}

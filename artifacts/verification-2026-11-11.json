@@ -1,0 +1,337 @@
+{
+  "project": "云奏",
+  "checkedAt": "2026-11-11T04:33:52.434582+00:00",
+  "scope": "3.7.6业务扩展与原有业务回归",
+  "sourceSha256": "52beaceae837546c94387ec5922e0c22516f75235fb5aaa7184851c137c51f0d",
+  "sourceFileCount": 240,
+  "migrations": [
+    {
+      "file": "database/migrations/001_business.sql",
+      "sha256": "8d89bc5fdc23b4f6d67e568fd7a0b242c01df1f5ec740f40b7649dfcb954eecc"
+    },
+    {
+      "file": "database/migrations/002_service_queue.sql",
+      "sha256": "e773d2626e3a0f02883295d05a82d65779734938804b70c37fd865cc74eb7e24"
+    },
+    {
+      "file": "database/migrations/003_audit_payload.sql",
+      "sha256": "1da7e96d4fae9739387052e1f5e3c8d99907e6f477c9592f18e2cf1232c0168d"
+    },
+    {
+      "file": "database/migrations/004_refunds.sql",
+      "sha256": "d0cd468fd06566da8774d35176202484649ca5487fafd2c61a36247da31bc302"
+    },
+    {
+      "file": "database/migrations/005_publications.sql",
+      "sha256": "a2cf545aa8eea8c1956a74cdbd7cc886a1819f16b27e344214cf625014ffda95"
+    },
+    {
+      "file": "database/migrations/006_extensions.sql",
+      "sha256": "678d4dfa87d00f2113caa65a755d8d96fe8bb2842abdb45d7b4de206e3b859a3"
+    },
+    {
+      "file": "database/migrations/007_imports.sql",
+      "sha256": "7c4d101fffa996b24fba7651867d32e748aacb7ea1b2dc3c39429974f160460d"
+    },
+    {
+      "file": "database/migrations/008_account_security.sql",
+      "sha256": "ff37de394b73fb4ed5d9b84d50d5db2221e72012970f1eddd389ce0012a9a70a"
+    },
+    {
+      "file": "database/migrations/009_import_guards.sql",
+      "sha256": "062cbefd9c7da42d2ec2773331333ed120cff9b6c329b155e9df3ef778e46d1c"
+    },
+    {
+      "file": "database/migrations/010_wallet.sql",
+      "sha256": "cd797b82e7e115749c37b1df501376ad3e1377664f0e3a5ae25641273c010586"
+    },
+    {
+      "file": "database/migrations/011_finance_invariants.sql",
+      "sha256": "8f2054a9b552c88c1c651b12a87a4801a405d69633d0145e1a4bd8973df9418f"
+    },
+    {
+      "file": "database/migrations/012_callbacks.sql",
+      "sha256": "506fe776a4573ef4b42ea710ae6ef037cb70e58da7a6fc00dee264bf655993fd"
+    },
+    {
+      "file": "database/migrations/013_cart.sql",
+      "sha256": "c24501cc153de4d989d0d2d35de644aefe7eedb910f82af620241a9f322bd129"
+    },
+    {
+      "file": "database/migrations/014_schedule_index.sql",
+      "sha256": "33800f4ef59f0125048af60cf4d7fe08999ecfbe3691491667deeb023c509acd"
+    },
+    {
+      "file": "database/migrations/015_wallet_source_guard.sql",
+      "sha256": "98ce9169f0a73f5d904ca2915f62e055c7f959601a0cfe0792289b39d9eb151c"
+    },
+    {
+      "file": "database/migrations/016_billing_reviews.sql",
+      "sha256": "3c5e70a1d335f05e1bb1ad343ed7eb5a9f3a0343e1a20b3102501b9f04910aae"
+    },
+    {
+      "file": "database/migrations/017_v376_catalogue.sql",
+      "sha256": "5d7acb83cbfb4fe3f57ac2e5629668a84c37489eb553de31a4c433b53339500f"
+    },
+    {
+      "file": "database/migrations/018_v376_identity.sql",
+      "sha256": "d3e3df8bb807b460ca94b1c67c6f03d6f90c83936785f0a5711ec30a9dcffd81"
+    },
+    {
+      "file": "database/migrations/019_v376_support.sql",
+      "sha256": "2174a2d955cf5cda49296a7099236cacc7710404fd53368a755832d6cd6d1cb3"
+    },
+    {
+      "file": "database/migrations/020_v376_documents.sql",
+      "sha256": "960a029119d46eedbdf5fee1251c5b4de4cbf9f7be32fb84b654f644ea5af184"
+    },
+    {
+      "file": "database/migrations/021_v376_service_lifecycle.sql",
+      "sha256": "c253cf0e1c68a1da30ee6c7684297e176c68d971b8870dde90fec29078fe79e1"
+    },
+    {
+      "file": "database/migrations/022_v376_affiliates.sql",
+      "sha256": "a474c7089b5e08c50ad728879da3c383b6ea19b60afe3c832f05276ff105dab5"
+    },
+    {
+      "file": "database/migrations/023_v376_recharge.sql",
+      "sha256": "b5c5ba7070784560ff09fb7b3ba2bd616ce2857b0ec2441c59a9e6f1ffd0db75"
+    },
+    {
+      "file": "database/migrations/024_v376_upgrades.sql",
+      "sha256": "4a5c2094271f58c13a647aff0ed0f205aabc827758ff8c4431be94376d22e851"
+    },
+    {
+      "file": "database/migrations/025_v376_credit.sql",
+      "sha256": "08b9291141649250c817c9e7e54b465989d4cbc2a9b9f6e13227d37e063c2514"
+    },
+    {
+      "file": "database/migrations/026_v376_verification.sql",
+      "sha256": "6ea2d9affe9d12c2ddf057e1c7a5872578b2263b8b707626337f00db65ea4376"
+    },
+    {
+      "file": "database/migrations/027_v376_affiliate_credit.sql",
+      "sha256": "a72435eb998ab1758b75ab92472a7787406008359b5b589064536267ea95ee87"
+    },
+    {
+      "file": "database/migrations/028_v376_account_verification.sql",
+      "sha256": "65efb07e283dd1c44baa7846c20ded93a6252fabd5b48bdeef5cda9565d4523b"
+    },
+    {
+      "file": "database/migrations/029_v376_combined.sql",
+      "sha256": "c08c27aa6260541b6480c6d1b55fdb1d23789dd120b1a48949db23c0022d5ded"
+    },
+    {
+      "file": "database/migrations/030_v376_account_recovery.sql",
+      "sha256": "add7a454c9825a9fe2245924e66b7bd05fc6c7c0239310fad8c197b8e746b3ed"
+    },
+    {
+      "file": "database/migrations/031_v376_custom_fields.sql",
+      "sha256": "95390a8239c412354b592c433ebc92a89c1a764f0f83ad8747c246ee8347d92b"
+    },
+    {
+      "file": "database/migrations/032_v376_catalogue_rules.sql",
+      "sha256": "fb64433f666ddb0a3fbc0af156f46ec38dc53fbf01516815a25d4e626f8e6757"
+    },
+    {
+      "file": "database/migrations/033_v376_currencies.sql",
+      "sha256": "028d13e5961511c911a5aff5dbde48d40dc6c3d2ff1db39cc39a8b078143862e"
+    },
+    {
+      "file": "database/migrations/034_v376_sales.sql",
+      "sha256": "ecf3b5cc4f2e4c36d113c579223542156d74747c9447bc2585c6cbcb60430a41"
+    },
+    {
+      "file": "database/migrations/035_v376_messaging.sql",
+      "sha256": "e64495f02ea9e462d40e39529e7db77cd5b0f28c0ca1e262aa2def21078f2540"
+    },
+    {
+      "file": "database/migrations/036_v376_batches.sql",
+      "sha256": "e627dd4160a2ecf5ddf2e199c80fe7f663b27c9270104d630b059669e888eab4"
+    },
+    {
+      "file": "database/migrations/037_v376_tax_corrections.sql",
+      "sha256": "ccf2098c41266114fb8793263f62123e6b63a2d81eab3d84d8651902dc8a2770"
+    },
+    {
+      "file": "database/migrations/038_v376_resource_modules.sql",
+      "sha256": "053dc433ce9e304fa36ee85cf03d4bef43f3cadc1904ff49d6b94816797c8e34"
+    }
+  ],
+  "checks": [
+    {
+      "name": "unit",
+      "status": "passed",
+      "tests": 23,
+      "includesParentTests": true,
+      "log": "artifacts/final-unit.log",
+      "sha256": "500c7a219132edb3c1d7212ddd22fb5cf11e5c6b0642f0d7ec7b14de02158dcb"
+    },
+    {
+      "name": "integration",
+      "status": "passed",
+      "tests": 13,
+      "includesParentTests": true,
+      "log": "artifacts/final-integration.log",
+      "sha256": "43e8e6b8f1d7fd07d160f18e5b57a43ce2ec376ec02dab33b8fcc41c3fec54a0"
+    },
+    {
+      "name": "commerce-api",
+      "status": "passed",
+      "tests": 39,
+      "includesParentTests": true,
+      "log": "artifacts/final-commerce-api.log",
+      "sha256": "e60d7ca746985f1841588b889fb03cf52afadceb1777a037795e772e96d257f3"
+    },
+    {
+      "name": "identity-sales-resource",
+      "status": "passed",
+      "tests": 40,
+      "includesParentTests": true,
+      "log": "artifacts/final-identity-sales-resource.log",
+      "sha256": "87e60b34352aeff63ba9917d9f288c7eef0756d277629cd4c32a5d757468e0ff"
+    },
+    {
+      "name": "support-protocols",
+      "status": "passed",
+      "tests": 53,
+      "includesParentTests": true,
+      "log": "artifacts/final-support-protocols.log",
+      "sha256": "64da46381cef627cb2a2e58713ce50ddd52089565443048206b4212586b793ec"
+    },
+    {
+      "name": "navigation-ui",
+      "status": "passed",
+      "tests": 16,
+      "includesParentTests": true,
+      "log": "artifacts/final-navigation-ui.log",
+      "sha256": "89d036500af52b83083e0026672f4c2c16f562b30059276d62d42e3795d9a888"
+    },
+    {
+      "name": "support",
+      "status": "passed",
+      "tests": 13,
+      "includesParentTests": true,
+      "log": "artifacts/final-support.log",
+      "sha256": "1f817451089eadf9bdc591b0ee003cb6c9baee2ed1324dffeddc27c790fd1749"
+    },
+    {
+      "name": "catalogue",
+      "status": "passed",
+      "tests": 7,
+      "includesParentTests": true,
+      "log": "artifacts/final-catalogue.log",
+      "sha256": "c36e30204733104c96864526d6c5e984a8ea6895e9d812797b1d8013c0703537"
+    },
+    {
+      "name": "accounts",
+      "status": "passed",
+      "tests": 10,
+      "includesParentTests": true,
+      "log": "artifacts/final-accounts.log",
+      "sha256": "7c1973ce32a8e635b613664709180898d47551fadf9567a8c834c3a24cceaf9b"
+    },
+    {
+      "name": "web-unit",
+      "status": "passed",
+      "tests": 8,
+      "includesParentTests": true,
+      "log": "artifacts/final-web-unit.log",
+      "sha256": "e401c381fa39d25a3ad2b8561f90ab22e2565cb7f513fbfe4e95ea4c2ed4a9b5"
+    },
+    {
+      "name": "finance",
+      "status": "passed",
+      "tests": 11,
+      "includesParentTests": true,
+      "log": "artifacts/final-finance.log",
+      "sha256": "5ab4e768b884366cb1ca627e9f52a01c55300f1ed6044b4b1aeb5633d44c0905"
+    },
+    {
+      "name": "wallet",
+      "status": "passed",
+      "tests": 7,
+      "includesParentTests": true,
+      "log": "artifacts/final-wallet.log",
+      "sha256": "da813abe7e598db1810169eda5a1400ae838a99b9b53a17d3691f5e836deee4f"
+    },
+    {
+      "name": "security",
+      "status": "passed",
+      "tests": 9,
+      "includesParentTests": true,
+      "log": "artifacts/final-security.log",
+      "sha256": "5d1a44b7e3f4fc0135c29ddf8ab7c18be81a7ecd59102da1da3f9270e2e4042a"
+    },
+    {
+      "name": "cart",
+      "status": "passed",
+      "tests": 10,
+      "includesParentTests": true,
+      "log": "artifacts/final-cart.log",
+      "sha256": "12d37524a1f681dc34d0205611b36b2592bf39b1f844740575e7adc4102209f2"
+    },
+    {
+      "name": "import",
+      "status": "passed",
+      "tests": 8,
+      "includesParentTests": true,
+      "log": "artifacts/final-import.log",
+      "sha256": "529feeb886e895e658e2c0ff9c4790637418cfb16bba62302aa27c027f188e1b"
+    },
+    {
+      "name": "lifecycle",
+      "status": "passed",
+      "tests": 11,
+      "includesParentTests": true,
+      "log": "artifacts/final-lifecycle.log",
+      "sha256": "0a9c979ccee1458062b7aca884c36dd93d44eac7ece0ada234deceec90561ed6"
+    },
+    {
+      "name": "static",
+      "status": "passed",
+      "tests": 2,
+      "includesParentTests": true,
+      "log": "artifacts/final-static.log",
+      "sha256": "2dbae16488277a9dcdcb977535ca05991447c90ac1b366bb0c34b5064f6db7ba"
+    },
+    {
+      "name": "review",
+      "status": "passed",
+      "scenarios": 10,
+      "log": "artifacts/final-review.log"
+    },
+    {
+      "name": "go-race-and-vet",
+      "status": "passed",
+      "log": "artifacts/final-go.log"
+    },
+    {
+      "name": "real-local-browser-commerce",
+      "status": "passed",
+      "screenshots": 11,
+      "log": "artifacts/final-commerce.log"
+    },
+    {
+      "name": "real-readonly-navigation",
+      "status": "passed",
+      "log": "artifacts/ajax-live-check.json"
+    }
+  ],
+  "builds": {
+    "full": "artifacts/final-build.log",
+    "finalApi": "artifacts/final-api-build.log",
+    "finalWeb": "artifacts/final-web-build.log",
+    "vueTypes": "artifacts/final-vue-types.log"
+  },
+  "screenshots": {
+    "realHomeDesktop": "artifacts/kima-home-desktop.png",
+    "realServicesMobile": "artifacts/kima-services-mobile.png",
+    "catalogueDesktop": "artifacts/v376-catalogue-admin-desktop.png",
+    "currencyMobile": "artifacts/v376-currencies-mobile.png",
+    "resourceMobile": "artifacts/v376-resource-overview-browser-mobile.png"
+  },
+  "counting": "测试数量包含父测试且不同组有重叠，不能作为独立功能数量相加。",
+  "externalServices": "支付及云平台边界使用隔离协议夹具或受控本地程序；未以真实商户执行收付款。",
+  "runtimeSmoke": "artifacts/final-runtime-smoke.log"
+}

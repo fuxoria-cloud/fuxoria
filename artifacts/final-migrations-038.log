@@ -1,0 +1,3 @@
+npm notice run yunzou@0.1.0 db:migrate
+npm notice run tsx scripts/database.ts
+已应用 038_v376_resource_modules.sql

@@ -1,0 +1,16 @@
+{
+  "productCreatedAtZeroYuan": true,
+  "realCartItems": 2,
+  "invoiceItemCount": 3,
+  "invoiceAmountMatchesServer": true,
+  "freeServices": 2,
+  "lifecycle": [
+    "active",
+    "suspended",
+    "active",
+    "cancelled"
+  ],
+  "terminationPreventsRenewal": true,
+  "screenshotCount": 11,
+  "pageErrors": []
+}

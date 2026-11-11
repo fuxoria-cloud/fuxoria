@@ -1,0 +1,22 @@
+npm notice run yunzou@0.1.0 test:cart
+npm notice run node --env-file=.env --import tsx --test apps/api/tests/cart.integration.test.ts
+▶ 购物车与多项订单真实并发验收
+  ✔ 旧单项服务回填成交项，原HTTP入口保持兼容 (56.055629ms)
+  ✔ 购物车CRUD、实时价格、数量边界和账号隔离 (86.658734ms)
+  ✔ 多项合成一张订单账单，每件一个服务，支付后全部排队一次 (182.034753ms)
+  ✔ 库存任一行不足整车回滚，购物车和其它库存完整保留 (47.687416ms)
+  ✔ 两个客户反向加入同组商品不会死锁或超卖，取消退回每件数量 (78.697771ms)
+  ✔ 旧revision、同key换快照和同revision换key明确冲突 (49.404277ms)
+  ✔ 数据库提交前并发加新商品，CAS保留整份新购物车 (66.652437ms)
+{"action":"cart.sync","orderId":"d324cbee-f048-4c69-be5c-d182d7eb7c27","message":"订单已提交，Redis同步暂未完成"}
+  ✔ 提交后Redis同步故障仍返回已确认订单，同key重试恢复清车 (2274.919167ms)
+  ✔ 免费单项与全免费购物车直接交付且没有假收款或会计凭据 (610.346467ms)
+✔ 购物车与多项订单真实并发验收 (17398.447325ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19654.344086

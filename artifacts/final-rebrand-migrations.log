@@ -1,0 +1,2 @@
+npm notice run fuxoria@0.1.0 db:migrate
+npm notice run tsx scripts/database.ts

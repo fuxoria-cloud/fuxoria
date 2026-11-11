@@ -1,0 +1,45 @@
+npm notice run fuxoria@0.1.0 test
+npm notice run npm run test --workspace=@fuxoria/api && npm run test --workspace=@fuxoria/payments
+npm notice run @fuxoria/api@0.1.0 test
+npm notice run tsx --test tests/money.test.ts tests/otp.test.ts
+✔ 一角加两角准确得到三角 (0.619785ms)
+✔ 金额上下文保留正负与前导空格 (0.087862ms)
+✔ 拒绝舍入、科学计数和非金额输入 (0.334826ms)
+✔ RFC4226十个HOTP计数器向量 (1.00804ms)
+✔ RFC6238六个SHA1时间向量，包含2038年以后的时间 (0.18641ms)
+✔ Base32按字节往返，口令容忍相邻周期且拒绝已消费计数器 (1.253817ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 238.852192
+npm notice run @fuxoria/payments@0.1.0 test
+npm notice run tsx --test tests/*.test.ts
+✔ 金额按整数分计算，拒绝浮点近似、负数与科学计数法 (0.899993ms)
+✔ 拒绝JSON嵌套重复字段、注释与大正文 (1.063845ms)
+✔ 易支付验签、商户、重复字段与UUID映射 (1.560148ms)
+✔ 支付宝通知核对RSA2、应用、收款人及金额 (1.560148ms)
+✔ 支付宝下单验证原始响应签名并返回当面付二维码 (24.219095ms)
+✔ 微信签名、时效、GCM资源与商户身份 (4.69944ms)
+✔ 虎皮椒使用官方MD5算法，拒绝篡改、过期与错误应用 (0.603162ms)
+✔ 虎皮椒下单验证响应签名，拒绝未签名的跳转地址 (1.063845ms)
+✔ 微信Native请求和返回同时验签 (2.055263ms)
+✔ 插件按文件发现，未配置通道拒绝下单 (12.138044ms)
+✔ 支付宝主动查询验证机构签名、商户身份和原订单 (28.30825ms)
+✔ 支付宝退款保持原申请号，重复请求用查询结果确认 (4.287438ms)
+✔ 微信GET查询签名包含查询串，并核对收款商户 (4.061846ms)
+✔ 微信处理中退款不会报成功，最终查单核对固定退款号和金额 (4.275564ms)
+✔ 微信公钥轮换允许新旧标识重叠，拒绝未登记标识 (45.789265ms)
+✔ 易支付V2查询与退款验签，V1拒绝无签名自动改账 (5.33941ms)
+✔ 虎皮椒只允许全额退款，不能安全验签的嵌套查询明确拒绝 (1.09709ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.54024

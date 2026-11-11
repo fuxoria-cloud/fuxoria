@@ -1,0 +1,8 @@
+{"path":"/","status":200,"cache":"public, max-age=0, s-maxage=300, stale-while-revalidate=600"}
+{"path":"/products","status":200,"cache":"public, max-age=0, s-maxage=60, stale-while-revalidate=300"}
+{"path":"/api/v1/health","status":200,"cache":"private, no-store"}
+{"path":"/recover","status":200,"cache":"private, no-store"}
+{"path":"/verify-login","status":200,"cache":"private, no-store"}
+{"path":"/verify-register","status":200,"cache":"private, no-store"}
+{"path":"/oauth/confirm","status":200,"cache":"private, no-store"}
+{"path":"/Recover","status":404,"cache":"private, no-store"}
